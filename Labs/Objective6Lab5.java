@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Objective6Lab5 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    int selection = 0;
+    int selection;
 
-    while(selection != 3) {
+    while(true) {
       System.out.println("_____Menu_____");
       System.out.println("1: Say Hello");
       System.out.println("2: List My favorite foods");
@@ -26,16 +26,10 @@ public class Objective6Lab5 {
       }
       if(selection == 3){
         System.out.println("Goodbye");
+        break;
       }
     }
 
     scanner.close();
   }
 }
-
-/*
-  I didn't see any other way around the endless loop besides putting
-  a test inside the while loop instead of always being true. The easiest
-  way was to define selection to be something other than 3 and as long
-  as the input was never 1 or 2 if would continue until 3 is selected.
-*/
